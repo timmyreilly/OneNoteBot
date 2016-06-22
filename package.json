@@ -1,17 +1,12 @@
 {
-  "name": "onenotebot",
+  "name": "onenote-bot",
   "version": "1.0.0",
-  "description": "\"send a text to this bot and have it automatically be uploaded to your OneNote notebook\"",
-  "main": "index.js",
+  "description": "onenote bot",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "office365",
-    "bot",
-    "microsoft"
-  ],
-  "author": "",
+  "author": "rachel weil",
   "license": "ISC",
   "dependencies": {
     "botbuilder": "^1.0.1",
