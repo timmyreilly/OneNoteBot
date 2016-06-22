@@ -1,0 +1,20 @@
+{
+  "name": "onenotebot",
+  "version": "1.0.0",
+  "description": "\"send a text to this bot and have it automatically be uploaded to your OneNote notebook\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "office365",
+    "bot",
+    "microsoft"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "botbuilder": "^1.0.1",
+    "restify": "^4.1.1"
+  }
+}
