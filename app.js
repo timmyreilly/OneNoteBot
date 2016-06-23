@@ -9,7 +9,7 @@ var text;
 
 
 // Create bot and add dialogs
-var bot = new builder.TextBot({ appId: 'YourAppId', appSecret: 'YourAppSecret' });
+var bot = new builder.TextBot({ appId: 'OneNoteTextBot', appSecret: 'f698da3c4c2f4839ac7c911bb969c7fb' });
 bot.add('/', new builder.CommandDialog()
     .matches('^yes', builder.DialogAction.beginDialog('/Yes'))
     .matches('^no', builder.DialogAction.beginDialog('/No') )
@@ -44,13 +44,24 @@ bot.add('/No', [
         session.endDialog();
     }
 ]);
-/* Setup Restify Server
+
+// Setup Restify Server
 var server = restify.createServer();
 server.post('/api/messages', bot.verifyBotFramework(), bot.listen());
+
+// Serve a static web page
+server.get(/.*/, restify.serveStatic({
+	'directory': '.',
+	'default': 'index.html'
+}));
+
+
 server.listen(process.env.port || 3978, function () {
     console.log('%s listening to %s', server.name, server.url); 
 });
-*/
+
+
+//Talk to OneNote
 
 function Go() {
 api.getSections(function(err, result){
