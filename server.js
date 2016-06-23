@@ -9,7 +9,7 @@ var text;
 
 
 // Create bot and add dialogs
-var bot = new builder.TextBot({ appId: 'OneNoteTextBot', appSecret: 'f698da3c4c2f4839ac7c911bb969c7fb' });
+var bot = new builder.BotConnectorBot({ appId: 'OneNoteTextBot', appSecret: 'f698da3c4c2f4839ac7c911bb969c7fb' });
 bot.add('/', new builder.CommandDialog()
     .matches('^yes', builder.DialogAction.beginDialog('/Yes'))
     .matches('^no', builder.DialogAction.beginDialog('/No') )
@@ -22,7 +22,7 @@ bot.add('/', new builder.CommandDialog()
         
     ]));
 
-bot.listenStdin();
+//bot.listenStdin();
 
 bot.add('/Yes', [
     function (session) {
